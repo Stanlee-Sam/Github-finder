@@ -1,0 +1,68 @@
+:root {
+  --primary-color: #000080;
+  --secondary-color: #ffff;
+  --alt-color: #fffdd0;
+  --alt-color2: #a6b6c9;
+}
+.container {
+  display: flex;
+}
+.sidebar {
+  width: 40%;
+  height: 100%;
+  color: var(--secondary-color);
+  margin-right: 20px;
+  margin-left: 20px;
+  position: fixed;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.prof-pic img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.github-btn button {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+.details {
+  color: var(--primary-color);
+}
+.content {
+  flex: 1;
+  margin-left: 250px;
+  text-align: justify;
+  width: 60%;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background: var(--alt-color2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.card .card-title,
+.card-description {
+  margin: 10px;
+}
+
+.card .extras {
+  background: var(--alt-color);
+  display: flex;
+  align-items: center;
+}
+.card .extras .fork,
+.star {
+  margin: 10px;
+}

@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #000080;
+    --secondary-color: #ffff;
+  }
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    height: 15vh;
+    
+}
+nav .title {
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+nav .owner, a{
+    color: var(--secondary-color);
+}
+
+.search-bar form input{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 0 20px;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.search-bar form button{
+    height: 40px;
+    width: 100px;
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
