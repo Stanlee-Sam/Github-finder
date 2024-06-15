@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
         <div className="owner">
           <p>
-            By <a href="#">Stanley Amunze</a>
+            By <a href="https://github.com/Stanlee-Sam">Stanley Amunze</a>
           </p>
         </div>
         <div className="search-bar">

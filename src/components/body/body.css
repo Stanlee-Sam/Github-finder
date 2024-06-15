@@ -4,24 +4,30 @@
   --alt-color: #fffdd0;
   --alt-color2: #a6b6c9;
 }
-.container {
+.body-container {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 15vh;
 }
 .sidebar {
-  width: 40%;
-  height: 100%;
-  color: var(--secondary-color);
+  width: 13%;
+  padding-bottom: 20px;
+  color: var(--primary-color);
   margin-right: 20px;
-  margin-left: 20px;
+  padding: 0 20px 0 20px;
   position: fixed;
-  height: 100vh;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+
   box-sizing: border-box;
+  /* background: green; */
 }
 .prof-pic img {
   width: 200px;
   height: 200px;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 .github-btn button {
   background: var(--primary-color);
@@ -29,27 +35,45 @@
   border-radius: 5px;
   height: 40px;
   width: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .details {
   color: var(--primary-color);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .content {
   flex: 1;
+
   margin-left: 250px;
-  text-align: justify;
-  width: 60%;
+  /* width: 50vh; */
+  /* text-align: justify; */
+}
+.content h2 {
+  margin-left: 20px;
 }
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+}
+.cards-container h3 {
+  font-size: 20px;
 }
 
 .card {
   background: var(--alt-color2);
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin: 10px;
+  width: 400px;
+  display: grid;
+}
+.card .card-title {
+  font-size: 30px;
+  text-align: center;
 }
 
 .card .card-title,
@@ -60,9 +84,143 @@
 .card .extras {
   background: var(--alt-color);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .card .extras .fork,
 .star {
   margin: 10px;
+}
+
+.follower-pic,
+.following-pic {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.follower-pic img,
+.following-pic img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .sidebar {
+    width: 17%;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .sidebar {
+    width: 19%;
+  }
+
+  .prof-pic img {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .prof-pic img {
+    width: 150px;
+    height: 150px;
+  }
+  .sidebar {
+    width: 26%;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .body-container {
+    padding-top: 130px;
+  }
+  .sidebar {
+    width: 35%;
+  }
+  .card .card-title {
+    font-size: 20px;
+  }
+  .content {
+    margin-left: 215px;
+  }
+  .cards-container h3 {
+    font-size: 15px;
+  }
+  .card {
+    width: 300px;
+  }
+}
+
+/* sm */
+@media (max-width: 525px) {
+  .prof-pic img {
+    width: 130px;
+    height: 130px;
+  }
+  .card .card-title {
+    font-size: 7px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content {
+    margin-left: 180px;
+  }
+  .card .card-title {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .prof-pic img {
+    width: 100px;
+    height: 100px;
+  }
+  .card .card-title {
+    font-size: 5px;
+  }
+  .content {
+    margin-left: 150px;
+  }
+  .content-title {
+    font-size: 10px;
+  }
+  .card .card-title h3 {
+    font-size: 10px;
+  }
+  .card .extras .fork,
+  .star {
+    margin: 5px;
+  }
+  .card-description a,
+  p {
+    font-size: 10px;
+  }
+  .sidebar {
+    margin-left: 15px;
+  }
+}
+/* xs */
+@media (max-width: 475px) {
+  /* .cards-container {
+    display: flex;
+    flex-direction: column;
+  } */
+  .content {
+    width: 20vh;
+  }
+}
+@media (max-width: 380px) {
+  .card-description a,
+  p {
+    font-size: 7px;
+  }
 }

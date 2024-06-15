@@ -1,39 +1,109 @@
 :root {
-    --primary-color: #000080;
-    --secondary-color: #ffff;
-  }
+  --primary-color: #000080;
+  --secondary-color: #ffff;
+}
 
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--primary-color);
-    height: 15vh;
-    
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 12;
+  width: 100%;
+  padding: 0 20px;
 }
 nav .title {
-    color: var(--secondary-color);
-    font-size: 20px;
+  color: var(--secondary-color);
+  font-size: 20px;
 }
-nav .owner, a{
-    color: var(--secondary-color);
+nav .owner,
+a {
+  color: var(--secondary-color);
 }
 
-.search-bar form input{
-    width: 300px;
-    height: 30px;
-    border: none;
-    border-radius: 3px;
-    outline: none;
-    padding: 0 20px;
-    font-size: 20px;
-    color: var(--primary-color);
+.search-bar form input {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  padding: 0 20px;
+  font-size: 20px;
+  color: var(--primary-color);
 }
-.search-bar form button{
+.search-bar form button {
+  height: 40px;
+  width: 100px;
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+}
+
+/* xl */
+@media (max-width: 1280px) {
+}
+
+/* lg */
+@media (max-width: 1024px) {
+}
+
+/* md */
+@media (max-width: 800px) {
+  nav {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    height: 20vh;
+    padding-bottom: 20px;
+  }
+
+  nav .title {
+    color: var(--secondary-color);
+    font-size: 15px;
+  }
+  nav .owner,
+  a {
+    color: var(--secondary-color);
+    font-size: 15px;
+  }
+  form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-bar form input {
+    width: 200px;
+    font-size: 15px;
+    color: var(--primary-color);
+  }
+  .search-bar form button {
     height: 40px;
     width: 100px;
+    margin-top: 5px;
     margin-right: 20px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 15px;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  nav {
+    height: 23vh;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
 }
