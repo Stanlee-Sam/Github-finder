@@ -12,8 +12,10 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
+// Function to fetch data from api
 const Body = () => {
   const {
+    username,
     userData,
     repos,
     followers,
@@ -83,17 +85,13 @@ const Body = () => {
     [setError, setFollowers, setFollowing, setLoading, setRepos, setUserData]
   );
   useEffect(() => {
-    const defaultUsername = "stanlee-sam";
-    setUsername(defaultUsername);
-    fetchGithubData(defaultUsername);
-  }, [fetchGithubData, setUsername]);
-  //   if (username) {
-  //     console.log("Username effect: ", username);
-  //     fetchGithubData(username);
-  //   } else {
-  //     console.log("No username");
-  //   }
-  // }, [username, fetchGithubData]);
+    const defaultUsername = "Stanlee-Sam";
+    if (!username) {
+      setUsername(defaultUsername);
+    } else {
+      fetchGithubData(username);
+    }
+  }, [username, fetchGithubData, setUsername]);
 
   return (
     <section className="body-container">
@@ -175,22 +173,6 @@ const Body = () => {
               </div>
             </div>
           ))}
-          {/* <div className="card">
-            <div className="card-title">
-              <h3>.github</h3>
-            </div>
-            <div className="card-description">
-              <p>Community health files for the @GitHub organization</p>
-            </div>
-            <div className="extras">
-              <div className="fork">
-                <i className="fas fa-code-branch">forks</i>
-              </div>
-              <div className="star">
-                <i className="fas fa-star">stars</i>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         <div className="content-title">
